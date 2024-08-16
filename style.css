@@ -36,9 +36,12 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
     font-size: 1.5em; /* Larger font size for navigation links */
-    color: white;
+    color: white; /* Text color */
+    background: none; /* Remove any background color */
+    padding: 0; /* Remove any padding */
+    border: none; /* Remove any borders */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
