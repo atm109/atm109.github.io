@@ -104,8 +104,8 @@ section img {
     text-decoration: none;
     font-size: 1em;
     width: 100px; /* Adjust the size to make it square */
-    height: 50px;
-    line-height: 50px; /* Vertically center the text */
+    height: 40px;
+    line-height: 40px; /* Vertically center the text */
     border-radius: 5px; /* Slightly rounded corners, adjust as needed */
     margin: 50px; /* Add space around the button */
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
