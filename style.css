@@ -13,52 +13,44 @@ body {
 
 /* Header Styling */
 header {
-    background-color: transparent; /* Keep the header transparent */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
+    background-color: #555; /* Solid grey background */
+    padding: 20px 0; /* Increase padding for a larger banner */
 }
 
 .logo h1 {
-    font-family: 'Comic sans MS', cursive, sans-serif;
-    font-size: 2.5em;
-    color: #333; /* Dark grey logo text */
+    font-family: 'Verdana', sans-serif;
+    font-size: 2.5em; /* Larger font size for the logo */
+    color: white;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 20px; /* Increase spacing between menu items */
 }
 
 nav ul li a {
     text-decoration: none;
-    font-size: 1.5em;
-    color: #333; /* Dark grey text color for navigation */
-    background-color: #fff; /* White background for buttons */
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1.5em; /* Larger font size for navigation links */
+    color: white;
 }
 
 nav ul li a:hover {
-    background-color: #888; /* Slightly darker grey on hover */
-    color: #fff; /* White text on hover */
+    color: #ddd; /* Lighter grey on hover */
 }
 
-/* Sections Styling */
+/* Section Styling */
 section {
-    padding: 20px 10%;
+    padding: 60px 0; /* Add padding to the sections */
+    text-align: center;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #4CAF50;
-    text-align: center;
-    padding: 15px;
-    color: white;
+section img {
+    border-radius: 10px;
 }
