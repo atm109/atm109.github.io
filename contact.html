@@ -125,81 +125,144 @@
 </head>
 
 <body>
-    <header style="background-color: #555555; padding: 20px 0; display: flex; align-items: center; justify-content: space-between;">
-        <div class="logo" style="text-align: left; padding-left: 20px;">
-            <!-- <h1 style="font-family: 'Verdana', sans-serif; font-size: 2.5em; color: white;">Andrew McCartney</h1> -->
-        </div>
-        <nav style="margin-top: 10px;">
-            <ul class="nav-links" style="list-style: none; display: flex; justify-content: flex-end; padding: 0;">
-                <li style="margin: 0 20px;">
-                    <a href="index.html">Home</a> <!-- Links to the Home page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="about.html">About</a> <!-- Links to the About page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="projects.html">Projects</a> <!-- Links to the Projects page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="resume.html">Resume</a> <!-- Links to the Resume page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="contact.html">Contact</a> <!-- Links to the Contact page -->
-                </li>
+    <script>
+        window.onload = function() {
+            // Get the ID of the clicked button from localStorage
+            var clickedButton = localStorage.getItem('clickedButton');
+    
+            // If a button was clicked previously, apply the "active" styles
+            if (clickedButton) {
+                var button = document.getElementById(clickedButton);
+                button.style.color = 'red';
+                button.style.transform = 'scale(1.2)'; // Keep the button larger
+            }
+        }
+    
+        function setActive(buttonId) {
+            // Remove "active" styles from all buttons
+            var buttons = document.querySelectorAll('.nav-links li a');
+            buttons.forEach(function(btn) {
+                btn.style.color = '';
+                btn.style.transform = '';
+            });
+    
+            // Apply the "active" styles to the clicked button
+            var button = document.getElementById(buttonId);
+            button.style.color = 'red';
+            button.style.transform = 'scale(1.2)';
+    
+            // Store the ID of the clicked button in localStorage
+            localStorage.setItem('clickedButton', buttonId);
+        }
+    </script>
+    <body>
+      <!--Header(start)-->
+      <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a id="homeButton" href="index.html" onclick="setActive('homeButton')">Home</a></li>
+                <li><a id="aboutButton" href="about.html" onclick="setActive('aboutButton')">About</a></li>
+                <li><a id="projectsButton" href="projects.html" onclick="setActive('projectsButton')">Projects</a></li>
+                <li><a id="resumeButton" href="resume.html" onclick="setActive('resumeButton')">Resume</a></li>
+                <li><a id="contactButton" href="contact.html" onclick="setActive('contactButton')">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-content">
+            <h1>Andrew McCartney</h1>
+            <p>Mechanical Engineering Portfolio</p>
+        </div>
     </header>
     
     <style>
-        /* Style for the header and navigation */
-        /* header {
-            background-color: #555;
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        } */
-    
-        /* Style for the logo */
-        .logo {
-            text-align: left;
-            padding-left: 20px;
+        /* Base styling */
+        body {
+            font-family: 'Calibri', sans-serif;
+            background-color: #f4f4f4;
+            color: #33333300;
+            margin: 0;
+            padding: 0;
         }
-    
-        .logo h1 {
-            font-family: 'Verdana', sans-serif;
-            font-size: 2.5em;
+
+        /* Header with background image */
+        header {
+            background-image: url('images/library.png'); /* Update this path if necessary */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            position: relative;
             color: white;
         }
-    
-        /* Style for navigation links */
+
+        /* Navigation bar */
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the navbar */
+            padding: 10px 0;
+        }
+
         .nav-links {
             list-style: none;
             display: flex;
-            justify-content: flex-end;
+            justify-content: right;
             padding: 0;
+            margin: 0;
         }
-    
+
         .nav-links li {
             margin: 0 20px;
             transition: transform 0.3s ease, color 0.3s ease;
         }
-    
-        /* Style for the links inside the navigation */
+
         .nav-links li a {
             text-decoration: none;
             font-size: 1.5em;
             color: white;
+            transition: color 0.3s ease;
         }
-    
-        /* Hover effect to increase size */
+
         .nav-links li:hover {
             transform: scale(1.2);
         }
-    
+
         .nav-links li:hover a {
-                color: #ff0000; /* Change this to the desired hover color */
-            }
+            color: #ff0000; /* Hover color */
+        }
+
+        .nav-links li.active a {
+            color: red !important; /* Active link color */
+            transform: scale(1.2);
+        }
+
+        /* Centered header content */
+        .header-content {
+            padding-top: 50px; /* Adjust for desired spacing from top */
+        }
+
+        .header-content h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .header-content p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
     </style>
     <div class="header-image">
         <h1>CONTACT ME</h1>
@@ -225,11 +288,29 @@
 
     </div>
     <div style="text-align: center; margin-top: 40px;">
-        <a href="#home" class="square-button">HOME</a>
+        <a href="index.html" class="square-button">HOME</a>
     </div>
     <div class="footer">
          Andrew McCartney - 2024
     </div>
+    <script>
+        window.onload = function() {
+            // Get the current page URL
+            var currentPage = window.location.pathname;
+
+            // Get all navigation links
+            var navLinks = document.querySelectorAll('.nav-links li a');
+
+            // Loop through each link and set the active class based on the URL
+            navLinks.forEach(function(link) {
+                // If the href matches the current page, add the 'active' class
+                if (currentPage.includes(link.getAttribute('href'))) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        }
+    </script>
+    
 </body>
 
 </html>

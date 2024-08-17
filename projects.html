@@ -7,167 +7,149 @@
     <title>Andrew McCartney - Resume</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Base styling */
         body {
-            font-family: 'Verdana', sans-serif;
+            font-family: 'Calibri', sans-serif;
             background-color: #f4f4f4;
-            color: #333;
+            color: #33333300;
             margin: 0;
             padding: 0;
         }
 
-        .header-image {
-            width: 100%;
-            height: 300px;
-            background-image: url('your-image-path.png');
+        /* Header with background image */
+        header {
+            background-image: url('images/library.png'); /* Update this path if necessary */
             background-size: cover;
             background-position: center;
-            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             text-align: center;
+            position: relative;
             color: white;
         }
 
-        .header-image h1 {
+        /* Navigation bar */
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the navbar */
+            padding: 10px 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li:hover {
+            transform: scale(1.2);
+        }
+
+        .nav-links li:hover a {
+            color: #ff0000; /* Hover color */
+        }
+
+        .nav-links li.active a {
+            color: red !important; /* Active link color */
+            transform: scale(1.2);
+        }
+
+        /* Centered header content */
+        .header-content {
+            padding-top: 50px; /* Adjust for desired spacing from top */
+        }
+
+        .header-content h1 {
             font-size: 4em;
             margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 40px 0;
+        .header-content p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
 
-        .resume-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 15px;
-            text-align: center;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .section-title {
-            font-size: 2em;
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
+        /* Footer styling */
         .footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <header style="background-color: #555555; padding: 20px 0; display: flex; align-items: center; justify-content: space-between;">
-        <div class="logo" style="text-align: left; padding-left: 20px;">
-            <!-- <h1 style="font-family: 'Verdana', sans-serif; font-size: 2.5em; color: white;">Andrew McCartney</h1> -->
-        </div>
-        <nav style="margin-top: 10px;">
-            <ul class="nav-links" style="list-style: none; display: flex; justify-content: flex-end; padding: 0;">
-                <li style="margin: 0 20px;">
-                    <a href="index.html">Home</a> <!-- Links to the Home page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="about.html">About</a> <!-- Links to the About page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="projects.html">Projects</a> <!-- Links to the Projects page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="resume.html">Resume</a> <!-- Links to the Resume page -->
-                </li>
-                <li style="margin: 0 20px;">
-                    <a href="contact.html">Contact</a> <!-- Links to the Contact page -->
-                </li>
+    <!--Header(start)-->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a id="homeButton" href="index.html" onclick="setActive('homeButton')">Home</a></li>
+                <li><a id="aboutButton" href="about.html" onclick="setActive('aboutButton')">About</a></li>
+                <li><a id="projectsButton" href="projects.html" onclick="setActive('projectsButton')">Projects</a></li>
+                <li><a id="resumeButton" href="resume.html" onclick="setActive('resumeButton')">Resume</a></li>
+                <li><a id="contactButton" href="contact.html" onclick="setActive('contactButton')">Contact</a></li>
             </ul>
         </nav>
+        <div class="header-content">
+            <h1>Andrew McCartney</h1>
+            <p>Mechanical Engineering Portfolio</p>
+        </div>
     </header>
-    
-    <style>
-        /* Style for the header and navigation */
-        /* header {
-            background-color: #555;
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        } */
-    
-        /* Style for the logo */
-        .logo {
-            text-align: left;
-            padding-left: 20px;
-        }
-    
-        .logo h1 {
-            font-family: 'Verdana', sans-serif;
-            font-size: 2.5em;
-            color: white;
-        }
-    
-        /* Style for navigation links */
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: flex-end;
-            padding: 0;
-        }
-    
-        .nav-links li {
-            margin: 0 20px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-    
-        /* Style for the links inside the navigation */
-        .nav-links li a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: white;
-        }
-    
-        /* Hover effect to increase size */
-        .nav-links li:hover {
-            transform: scale(1.2);
-        }
-    
-        .nav-links li:hover a {
-                color: #ff0000; /* Change this to the desired hover color */
-            }
-    </style>
+
     <div class="header-image">
         <h1>PROJECTS</h1>
     </div>
 
     <div class="container">
-    
-
         <!-- Add more sections like Skills, Certifications, etc. -->
-
     </div>
     <div style="text-align: center; margin-top: 40px;">
-        <a href="#home" class="square-button">HOME</a>
+        <a href="index.html" class="square-button">HOME</a>
     </div>
     <div class="footer">
-        © Andrew McCartney - 2024
+        Andrew McCartney - 2024
     </div>
+
+    <script>
+        window.onload = function() {
+            // Get the current page URL
+            var currentPage = window.location.pathname;
+
+            // Get all navigation links
+            var navLinks = document.querySelectorAll('.nav-links li a');
+
+            // Loop through each link and set the active class based on the URL
+            navLinks.forEach(function(link) {
+                if (currentPage.includes(link.getAttribute('href'))) {
+                    link.parentElement.classList.add('active');
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>
+
 
