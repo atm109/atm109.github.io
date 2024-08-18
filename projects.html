@@ -4,98 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew McCartney - Resume</title>
+    <title>Andrew McCartney - Projects</title>
     <link rel="stylesheet" href="style.css">
     <style>
         /* Base styling */
         body {
-            font-family: 'Calibri', sans-serif;
-            background-color: #f4f4f4;
-            color: #33333300;
-            margin: 0;
-            padding: 0;
-        }
+    font-family: 'Calibri', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }
 
-        /* Header with background image */
-        header {
-            background-image: url('images/library.png'); /* Update this path if necessary */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            color: white;
-        }
+/* Header with background image */
+header {
+    background-image: url('images/project.png'); /* Update this path if necessary */
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    position: relative;
+    color: white;
+}
 
-        /* Navigation bar */
-        nav {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the navbar */
-            padding: 10px 0;
-        }
+/* Navigation bar */
+nav {
+    width: 100%;
+    padding: 10px 0;
+    position: absolute; /* Position the nav at the top of the header */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end; /* Keep the navigation to the right */
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: right;
-            padding: 0;
-            margin: 0;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 20px 0 0;
+}
 
-        .nav-links li {
-            margin: 0 20px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
+.nav-links li {
+    margin: 0 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-        .nav-links li a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: white;
-            transition: color 0.3s ease;
-        }
+.nav-links li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    transition: color 0.3s ease;
+}
 
-        .nav-links li:hover {
-            transform: scale(1.2);
-        }
+.nav-links li:hover {
+    transform: scale(1.2);
+}
 
-        .nav-links li:hover a {
-            color: #ff0000; /* Hover color */
-        }
+.nav-links li:hover a {
+    color: #ff0000; /* Hover color */
+}
 
-        .nav-links li.active a {
-            color: red !important; /* Active link color */
-            transform: scale(1.2);
-        }
+.nav-links li.active a {
+    color: red !important; /* Active link color */
+    transform: scale(1.2);
+}
 
-        /* Centered header content */
-        .header-content {
-            padding-top: 50px; /* Adjust for desired spacing from top */
-        }
+/* Centered header content */
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-        .header-content h1 {
-            font-size: 4em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
+.header-content h1 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
-        .header-content p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-        }
+.header-content p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
 
-        /* Footer styling */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
     </style>
 </head>
 
@@ -112,8 +114,8 @@
             </ul>
         </nav>
         <div class="header-content">
-            <h1>Andrew McCartney</h1>
-            <p>Mechanical Engineering Portfolio</p>
+            <h1>PROJECTS</h1>
+            <!-- <p>Mechanical Engineering Portfolio</p> -->
         </div>
     </header>
 

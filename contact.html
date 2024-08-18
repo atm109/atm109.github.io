@@ -4,155 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew McCartney - Resume</title>
+    <title>Andrew McCartney - Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Calibri', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
 
-        .header-image {
-            width: 100%;
-            height: 300px;
-            background-image: url('your-image-path.png');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+     body {
+    font-family: 'Calibri', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    }  
 
-        .header-image h1 {
-            font-size: 4em;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
+/* Header with background image */
+    header {
+        background-image: url('images/library.png'); /* Update this path if necessary */
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        position: relative;
+        color: white;
+    }
 
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
+    /* Navigation bar */
+    nav {
+        width: 100%;
+        padding: 10px 0;
+        position: absolute; /* Position the nav at the top of the header */
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end; /* Keep the navigation to the right */
+    }
 
-        .resume-button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 15px;
-            text-align: center;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0 20px 0 0;
+    }
 
-        .section-title {
-            font-size: 2em;
-            color: #4CAF50;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    .nav-links li {
+        margin: 0 20px;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
 
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .contact-form {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-        }
+    .nav-links li a {
+        text-decoration: none;
+        font-size: 1.5em;
+        color: white;
+        transition: color 0.3s ease;
+    }
 
-        .contact-form h1 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
-        }
+    .nav-links li:hover {
+        transform: scale(1.2);
+    }
 
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
+    .nav-links li:hover a {
+        color: #ff0000; /* Hover color */
+    }
 
-        .contact-form textarea {
-            height: 150px;
-            resize: none;
-        }
+    .nav-links li.active a {
+        color: red !important; /* Active link color */
+        transform: scale(1.2);
+    }
 
-        .contact-form button {
-            background-color: #ff3366;
-            color: #fff;
-            border: none;
-            padding: 15px 0;
-            width: 100%;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    /* Centered header content */
+    .header-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 
-        .contact-form button:hover {
-            background-color: #e62e59;
-        }
+    .header-content h1 {
+        font-size: 4em;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
 
-        .contact-form .required {
-            color: red;
-        }
+    .header-content p {
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Footer styling */
+    .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+    .contact-form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contact-form h1 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #333;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    .contact-form button {
+        background-color: #ff0000;
+        color: #000000;
+        border: none;
+        padding: 15px 0;
+        width: 100%;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+        background-color: #e62e59;
+    }
+
+    .contact-form .required {
+        color: red;
+    }
     </style>
 </head>
 
 <body>
     <script>
         window.onload = function() {
-            // Get the ID of the clicked button from localStorage
-            var clickedButton = localStorage.getItem('clickedButton');
-    
-            // If a button was clicked previously, apply the "active" styles
-            if (clickedButton) {
-                var button = document.getElementById(clickedButton);
-                button.style.color = 'red';
-                button.style.transform = 'scale(1.2)'; // Keep the button larger
-            }
-        }
-    
-        function setActive(buttonId) {
-            // Remove "active" styles from all buttons
-            var buttons = document.querySelectorAll('.nav-links li a');
-            buttons.forEach(function(btn) {
-                btn.style.color = '';
-                btn.style.transform = '';
+            // Get the current page URL
+            var currentPage = window.location.pathname;
+
+            // Get all navigation links
+            var navLinks = document.querySelectorAll('.nav-links li a');
+
+            // Loop through each link and set the active class based on the URL
+            navLinks.forEach(function(link) {
+                // If the href matches the current page, add the 'active' class
+                if (currentPage.includes(link.getAttribute('href'))) {
+                    link.parentElement.classList.add('active');
+                }
             });
-    
-            // Apply the "active" styles to the clicked button
-            var button = document.getElementById(buttonId);
-            button.style.color = 'red';
-            button.style.transform = 'scale(1.2)';
-    
-            // Store the ID of the clicked button in localStorage
-            localStorage.setItem('clickedButton', buttonId);
         }
     </script>
     <body>
@@ -168,106 +182,11 @@
             </ul>
         </nav>
         <div class="header-content">
-            <h1>Andrew McCartney</h1>
-            <p>Mechanical Engineering Portfolio</p>
+            <h1>CONTACT ME</h1>
+            <!-- <p>Mechanical Engineering Portfolio</p> -->
         </div>
     </header>
-    
-    <style>
-        /* Base styling */
-        body {
-            font-family: 'Calibri', sans-serif;
-            background-color: #f4f4f4;
-            color: #33333300;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header with background image */
-        header {
-            background-image: url('images/library.png'); /* Update this path if necessary */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            color: white;
-        }
-
-        /* Navigation bar */
-        nav {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the navbar */
-            padding: 10px 0;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            justify-content: right;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links li {
-            margin: 0 20px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .nav-links li a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: white;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links li:hover {
-            transform: scale(1.2);
-        }
-
-        .nav-links li:hover a {
-            color: #ff0000; /* Hover color */
-        }
-
-        .nav-links li.active a {
-            color: red !important; /* Active link color */
-            transform: scale(1.2);
-        }
-
-        /* Centered header content */
-        .header-content {
-            padding-top: 50px; /* Adjust for desired spacing from top */
-        }
-
-        .header-content h1 {
-            font-size: 4em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        .header-content p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Footer styling */
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-    </style>
-    <div class="header-image">
-        <h1>CONTACT ME</h1>
-    </div>
-
+ 
     <div class="container">
         <div class="contact-form">
             <h1>LET'S TALK</h1>
